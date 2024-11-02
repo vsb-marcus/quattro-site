@@ -6882,7 +6882,7 @@ ul{
 /*Breadcrumb Start*/
 .breadcrumb_wrapper{
 	position: relative;
-	background: url('../images/not_fount/1920x160') no-repeat center;
+	background: url(../images/breadcrumb_bg.jpg) no-repeat center;
 	background-size: cover;
 	padding: 180px 0px 50px;
 	z-index: 1;
@@ -10117,6 +10117,7 @@ ul{
 	}
 	.clv_footer_wrapper .footer_block .footer_logo a img{
 		max-width: 100%;
+		text-align: center;
 	}
 }
 @media (max-width: 768px) and (min-width: 768px){
@@ -11041,6 +11042,9 @@ ul{
 	}
 }
 @media (max-width: 550px){
+	.footer_logo {
+		text-align: center;
+	}
 	.clv_team_wrapper .team_section .col-md-3{
 		width: 100%;
 	}
@@ -11124,6 +11128,9 @@ ul{
 	}
 }
 @media (max-width: 480px){
+	.footer_logo {
+		text-align: center;
+	}
 	.index_v1 .clv_rev_slider .erinyen.tparrows{
 		min-width: 40px;
 		min-height: 40px;
@@ -11406,6 +11413,9 @@ ul{
 	}
 }
 @media (max-width: 320px){
+	.footer_logo {
+		text-align: center;
+	}
 	.clv_right_header .clv_menu .cart_nav ul > li > .clv_cart_box{
 		min-width: 250px;
 	}
