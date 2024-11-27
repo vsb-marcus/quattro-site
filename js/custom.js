@@ -97,10 +97,10 @@ Version: 1.0.0
 					slideShadows: false,
 					depth: 0,
 				},
-				autoplay: {
-					delay: 10000,
-					disableOnInteraction: false,
-				},
+				// autoplay: {
+				// 	delay: 10000,
+				// 	disableOnInteraction: false,
+				// },
 				navigation: {
 					nextEl: '.banner_right',
 					prevEl: '.banner_left',

@@ -6069,11 +6069,12 @@ ul{
 	padding: 236px 0px
 }
 .index_v6 .clv_banner_slider .clv_slide.slide2{
-	background: url(../images/index6_slider_bg2.jpg) no-repeat center;
+	/* background: url(../images/index6_slider_bg2.jpg) no-repeat center; */
+	background: url(../images/faz-cafe2.jpg) no-repeat center;
 	background-size: cover;
 }
 .index_v6 .clv_banner_slider .clv_slide:before{
-	background-color: rgba(0, 0, 0, 0.6);
+	background-color: rgba(0, 0, 0, 0.4);
 }
 .index_v6 .clv_banner_slider .clv_slide .clv_slide_inner h3{
 	letter-spacing: 0;
