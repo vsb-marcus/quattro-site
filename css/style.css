@@ -6063,7 +6063,7 @@ ul{
 /*Coffee Banner Start*/
 .index_v6 .clv_banner_slider .clv_slide{
 	/* background: url(../images/index6_slider_bg2.jpg) no-repeat center; */
-	background: url(../images/cafezal_decima.jpg) no-repeat center;
+	background: url(../images/front.jpg) no-repeat center;
 	background-size: cover;
 	/* padding: 236px 0px 96px; */
 	padding: 236px 0px
@@ -11017,6 +11017,7 @@ ul{
 	}
 	.breadcrumb_wrapper{
 		padding: 43px 0px 47px;
+		padding-top: 100px;
 	}
 	.service_page .clv_features_wrapper{
 		padding-top: 85px;
@@ -11497,4 +11498,188 @@ ul{
 
 /********************************************************
 39. Responsive CSS End
+*******************************************************/
+
+/********************************************************
+40. Quattro Custom Mobile Fixes Start
+*******************************************************/
+/* Custom logo styles for better mobile display */
+.quattro_logo_custom {
+    display: flex !important;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.quattro_logo_text {
+    color: #ffffff !important;
+    margin: 0 !important;
+    position: relative !important;
+    white-space: nowrap;
+}
+
+/* Mobile responsive fixes */
+@media (max-width: 991px) {
+    /* Create vertical layout with menu above logo */
+    .index_v6 .header4_wrapper .clv_header4 .row {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    /* Menu container - position above logo */
+    .index_v6 .header4_wrapper .clv_header4 .col-lg-10 {
+        order: 1;
+        margin-bottom: 5px;
+        width: 100%;
+        max-width: 100%;
+        flex: none;
+    }
+    
+    /* Logo container - position below menu */
+    .index_v6 .header4_wrapper .clv_header4 .col-lg-2 {
+        order: 2;
+        width: 100%;
+        max-width: 100%;
+        flex: none;
+    }
+    
+    .quattro_logo_custom {
+        justify-content: center;
+        text-align: center;
+    }
+    
+    .index_v6 .header4_wrapper .clv_header4 .clv_left_header {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0px 0 5px 0;
+    }
+    
+    .index_v6 .header4_wrapper .clv_header4 {
+        padding: 8px 15px;
+    }
+    
+    /* Ensure menu toggle button is visible and properly styled */
+    .index_v6 .clv_right_header .clv_menu .cart_nav > ul > li.menu_toggle {
+        display: inline-block !important;
+        padding: 0;
+        margin: 0;
+    }
+    
+    .index_v6 .clv_right_header .clv_menu .cart_nav > ul > li.menu_toggle span {
+        color: #ffffff;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: auto;
+        height: auto;
+        padding: 8px;
+    }
+    
+    .index_v6 .clv_right_header .clv_menu .cart_nav > ul > li.menu_toggle svg path {
+        fill: #ffffff !important;
+    }
+    
+    /* Hide the "Onde estamos" button on mobile */
+    .index_v6 .clv_right_header .clv_menu .clv_btn {
+        display: none;
+    }
+    
+    /* Mobile menu navigation */
+    .index_v6 .clv_right_header .clv_menu .clv_menu_nav {
+        position: fixed;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        background-color: #b89d64;
+        flex-direction: column;
+        border-radius: 0;
+        width: 250px;
+        transform: translateX(-260px);
+        overflow-y: auto;
+        overflow-x: hidden;
+        padding: 0 10px;
+        padding-top: 20px;
+        z-index: 999;
+        transition: all 0.3s ease-in-out;
+    }
+    
+    .index_v6 .clv_right_header .clv_menu .clv_menu_nav.nav_toggle {
+        transform: translateX(0px);
+    }
+    
+    .index_v6 .clv_right_header .clv_menu .clv_menu_nav > ul > li {
+        display: block;
+        padding: 0;
+    }
+    
+    .index_v6 .clv_right_header .clv_menu .clv_menu_nav > ul > li > a {
+        display: block;
+        padding: 15px 0;
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+    
+    .index_v6 .clv_right_header .clv_menu {
+        justify-content: center;
+        padding: 0;
+        min-height: auto;
+        height: auto;
+    }
+    
+    .index_v6 .clv_right_header .clv_menu .cart_nav {
+        margin: 0;
+        padding: 0;
+        height: auto;
+        min-height: auto;
+    }
+    
+    .index_v6 .clv_right_header .clv_menu .cart_nav > ul {
+        margin: 0;
+        padding: 0;
+        height: auto;
+        min-height: auto;
+    }
+}
+
+@media (max-width: 767px) {
+    .quattro_logo_text {
+        font-size: 20px !important;
+    }
+    
+    .index_v6 .header4_wrapper .clv_header4 .clv_left_header {
+        padding: 0px 0 3px 0;
+    }
+    
+    .index_v6 .header4_wrapper .clv_header4 {
+        padding: 6px 10px;
+    }
+    
+    .index_v6 .header4_wrapper .clv_header4 .col-lg-10 {
+        margin-bottom: 3px;
+    }
+    
+    .index_v6 .clv_right_header .clv_menu .cart_nav > ul > li.menu_toggle span {
+        padding: 6px;
+    }
+}
+
+@media (max-width: 480px) {
+    .quattro_logo_text {
+        font-size: 18px !important;
+    }
+    
+    .index_v6 .header4_wrapper .clv_header4 {
+        padding: 5px 8px;
+    }
+    
+    .index_v6 .header4_wrapper .clv_header4 .col-lg-10 {
+        margin-bottom: 2px;
+    }
+    
+    .index_v6 .clv_right_header .clv_menu .cart_nav > ul > li.menu_toggle span {
+        padding: 5px;
+    }
+}
+/********************************************************
+40. Quattro Custom Mobile Fixes End
 *******************************************************/  
