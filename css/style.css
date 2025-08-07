@@ -5999,7 +5999,7 @@ ul{
     transition: all 0.3s ease-in-out;-webkit-transition: all 0.3s ease-in-out;-moz-transition: all 0.3s ease-in-out;
 } 
 .clv_header4{
-	background-color: rgba(139, 139, 139, 0.6);
+	background-color: rgba(240, 240, 240, 0.4);
 	border-radius: 80px;
 }
 .index_v6 .header4_wrapper.header4_fix{
@@ -6074,7 +6074,8 @@ ul{
 	background-size: cover;
 }
 .index_v6 .clv_banner_slider .clv_slide:before{
-	background-color: rgba(0, 0, 0, 0.4);
+	/* background-color: rgba(0, 0, 0, 0.4); */
+	background-color: rgba(0, 0, 0, 0.2); 
 }
 .index_v6 .clv_banner_slider .clv_slide .clv_slide_inner h3{
 	letter-spacing: 0;
@@ -11289,6 +11290,10 @@ ul{
 	.index_v4 .clv_banner_slider .clv_slide{
 		padding-bottom: 200px;
 	}
+	.index_v6 .clv_banner_slider .clv_slide{
+		min-height: 100vh;
+		padding: 150px 0px;
+	}
 	.index_v4 .clv_slide_inner .banner_btn > span{
 		display: none;
 	}
@@ -11558,6 +11563,10 @@ ul{
     
     /* Adjust logo margin-top specifically for mobile */
     .quattro_logo_custom img[src="images/logo-marca.png"] {
+        margin-top: -100px !important;
+    }
+    
+    .quattro_logo_custom img[src="images/logo-gpt.png"] {
         margin-top: -100px !important;
     }
     

@@ -798,5 +798,41 @@ Version: 1.0.0
 <script src="js/revolution.extension.slideanims.min.js"></script>
 <script src="js/revolution.extension.video.min.js"></script>
 <script src="js/custom.js"></script>
+<script>
+// Force scroll to top on page load/reload
+$(document).ready(function() {
+    // Immediately scroll to top
+    $('html, body').scrollTop(0);
+    
+    // Force scroll to top on window load (as backup)
+    $(window).on('load', function() {
+        $('html, body').scrollTop(0);
+    });
+    
+    // Prevent scroll restoration by browser
+    if ('scrollRestoration' in history) {
+        history.scrollRestoration = 'manual';
+    }
+});
+
+// Additional method using vanilla JavaScript (runs immediately)
+window.addEventListener('beforeunload', function() {
+    window.scrollTo(0, 0);
+});
+
+// Logo sticky behavior - change logo when header becomes sticky
+$(window).scroll(function(){
+    var scroll = $(window).scrollTop();
+    var logoImg = $('.quattro_logo_custom img');
+    
+    if (scroll >= 100) {
+        // When sticky (header4_fix), use logo-gpt.png for better contrast on black background
+        logoImg.attr('src', 'images/logo-gpt.png');
+    } else {
+        // When not sticky, use the original logo-marca.png
+        logoImg.attr('src', 'images/logo-marca.png');
+    }
+});
+</script>
 </body>
 </html>
