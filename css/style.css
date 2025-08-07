@@ -5999,7 +5999,7 @@ ul{
     transition: all 0.3s ease-in-out;-webkit-transition: all 0.3s ease-in-out;-moz-transition: all 0.3s ease-in-out;
 } 
 .clv_header4{
-	background-color: rgba(139, 139, 139, 0.3);
+	background-color: rgba(139, 139, 139, 0.6);
 	border-radius: 80px;
 }
 .index_v6 .header4_wrapper.header4_fix{
@@ -11517,6 +11517,8 @@ ul{
     white-space: nowrap;
 }
 
+
+
 /* Mobile responsive fixes */
 @media (max-width: 991px) {
     /* Create vertical layout with menu above logo */
@@ -11554,15 +11556,18 @@ ul{
         padding: 0px 0 5px 0;
     }
     
+    /* Adjust logo margin-top specifically for mobile */
+    .quattro_logo_custom img[src="images/logo-marca.png"] {
+        margin-top: -100px !important;
+    }
+    
     .index_v6 .header4_wrapper .clv_header4 {
         padding: 8px 15px;
     }
     
-    /* Ensure menu toggle button is visible and properly styled */
+    /* Hide menu toggle button on mobile */
     .index_v6 .clv_right_header .clv_menu .cart_nav > ul > li.menu_toggle {
-        display: inline-block !important;
-        padding: 0;
-        margin: 0;
+        /* display: none !important; */
     }
     
     .index_v6 .clv_right_header .clv_menu .cart_nav > ul > li.menu_toggle span {
@@ -11620,10 +11625,12 @@ ul{
     }
     
     .index_v6 .clv_right_header .clv_menu {
-        justify-content: center;
+        justify-content: flex-start;
         padding: 0;
         min-height: auto;
         height: auto;
+		margin-top: 15px;
+        margin-left: 20px;
     }
     
     .index_v6 .clv_right_header .clv_menu .cart_nav {
@@ -11670,6 +11677,7 @@ ul{
     
     .index_v6 .header4_wrapper .clv_header4 {
         padding: 5px 8px;
+		height: 90px !important;
     }
     
     .index_v6 .header4_wrapper .clv_header4 .col-lg-10 {
