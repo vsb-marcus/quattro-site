@@ -9290,8 +9290,9 @@ ul{
 	background-color:#f8eddc;
 	z-index:1111;
 }
-.preloader_inner {
-	
+.preloader_inner img {
+	    width: 200px; /* tamanho real desejado */
+    height: auto;
 }
 /********************************************************
 38. Preloader End
