@@ -34,7 +34,7 @@ Version: 1.0.0
 
 
 </head>
-<body>
+<body class="preloader-active">
 	<div class="preloader_wrapper">
 		<div class="preloader_inner">
 			<img src="images/preloader.gif" alt="image" />
@@ -804,9 +804,14 @@ $(document).ready(function() {
     // Immediately scroll to top
     $('html, body').scrollTop(0);
     
+    // Remove preloader-active class when page is ready
+    $('body').removeClass('preloader-active');
+    
     // Force scroll to top on window load (as backup)
     $(window).on('load', function() {
         $('html, body').scrollTop(0);
+        // Ensure preloader class is removed
+        $('body').removeClass('preloader-active');
     });
     
     // Prevent scroll restoration by browser
