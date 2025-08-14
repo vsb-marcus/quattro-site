@@ -9284,6 +9284,10 @@ ul{
 	left: 0;
 	right: 0;
 	bottom: 0;
+	width: 100%;
+	height: 100%;
+	min-height: 100vh;
+	min-height: 100dvh; /* Dynamic viewport height for better mobile support */
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -9292,6 +9296,29 @@ ul{
 }
 .preloader_inner {
 	
+}
+
+/* Mobile specific preloader fixes */
+@media (max-width: 991px) {
+	.preloader_wrapper {
+		/* Ensure full coverage on mobile devices */
+		min-height: 100vh;
+		min-height: 100dvh; /* Dynamic viewport height */
+		height: 100vh;
+		height: 100dvh;
+		overflow: hidden;
+	}
+}
+
+/* Additional fix for very small mobile screens */
+@media (max-width: 480px) {
+	.preloader_wrapper {
+		min-height: 100vh;
+		min-height: 100dvh;
+		height: 100vh;
+		height: 100dvh;
+		max-height: none;
+	}
 }
 /********************************************************
 38. Preloader End
