@@ -9289,6 +9289,11 @@ body.preloading {
   overflow: hidden;
   overscroll-behavior: contain; /* reduz o "bounce" no iOS */
 }
+/* trava o scroll durante o preloader */
+.no-scroll {
+  overflow: hidden !important;
+  height: 100%;
+}
 .preloader_wrapper{
   position: fixed;
   inset: 0;                /* top/right/bottom/left: 0 */
@@ -10320,7 +10325,7 @@ body.preloading {
 		text-align: center;
 	}
 	.index_v6 .header4_wrapper{
-		top: 20px;
+		top: 6px;
 	}
 	.index_v6 .clv_banner_slider .clv_slide .clv_slide_inner h2{
 		font-size: 32px;
