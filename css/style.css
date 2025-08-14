@@ -11605,6 +11605,28 @@ ul{
 
 /* Mobile responsive fixes */
 @media (max-width: 991px) {
+    /* Fix banner slider height for mobile */
+    .index_v6 .clv_banner_slider .clv_slide {
+        min-height: 100vh !important;
+        min-height: 100dvh !important; /* Dynamic viewport height */
+        min-height: -webkit-fill-available !important; /* iOS Safari fix */
+        padding: 80px 0px !important;
+        display: flex !important;
+        align-items: center !important;
+    }
+    
+    .index_v6 .clv_banner_slider .clv_slide .container {
+        width: 100% !important;
+        height: 100% !important;
+        display: flex !important;
+        align-items: center !important;
+    }
+    
+    .index_v6 .clv_banner_slider .clv_slide .banner_content {
+        margin-top: 0px !important;
+        width: 100% !important;
+    }
+    
     /* Create vertical layout with menu above logo */
     .index_v6 .header4_wrapper .clv_header4 .row {
         flex-direction: column;
@@ -11775,7 +11797,44 @@ ul{
     .index_v6 .clv_right_header .clv_menu .cart_nav > ul > li.menu_toggle span {
         padding: 5px;
     }
+    
+    /* Ensure banner covers full height on smaller screens */
+    .index_v6 .clv_banner_slider .clv_slide {
+        min-height: 100vh !important;
+        min-height: 100dvh !important;
+        min-height: -webkit-fill-available !important;
+        height: 100vh !important;
+        height: 100dvh !important;
+        padding: 60px 0px !important;
+    }
+    
+    .index_v6 .clv_banner_slider .clv_slide .clv_slide_inner h1 {
+        font-size: 48px !important;
+        line-height: 48px !important;
+    }
+    
+    .index_v6 .clv_banner_slider .clv_slide .clv_slide_inner h2 {
+        font-size: 48px !important;
+        line-height: 48px !important;
+    }
+    
+    .index_v6 .clv_banner_slider .clv_slide .clv_slide_inner h3 {
+        font-size: 18px !important;
+    }
+    
+    .index_v6 .clv_banner_slider .clv_slide .clv_slide_inner p {
+        font-size: 16px !important;
+    }
 }
+
+/* iOS specific banner fixes */
+@supports (-webkit-touch-callout: none) {
+    .index_v6 .clv_banner_slider .clv_slide {
+        height: -webkit-fill-available !important;
+        min-height: -webkit-fill-available !important;
+    }
+}
+
 /********************************************************
 40. Quattro Custom Mobile Fixes End
 *******************************************************/  
