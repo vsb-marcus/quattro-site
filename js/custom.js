@@ -1032,31 +1032,46 @@ $(document).ready(function(){
 	});
 
 });
-$(window).on('load', function(){
-	// Preloader JS
-	$(".preloader_wrapper").delay(2500).fadeOut();
-	$(".preloader_inner").delay(2500).fadeOut("slow");
 
-	$('.gallery_grid').isotope({
-		itemSelector: '.gallery_grid_item',
-		percentPosition: true,
-		masonry: {
-			//use outer width of grid-sizer for columnWidth
-			columnWidth: 30,
-			gutter: 10
-		}
-	});
-	$('.index_v3 .gallery_grid').isotope({
-		itemSelector: '.index_v3 .gallery_grid_item',
-		percentPosition: true,
-		masonry: {
-			//use outer width of grid-sizer for columnWidth
-			columnWidth: 0,
-			gutter: 0
-		}
-	});
-	/*Nice Select*/
-	$('select').niceSelect();
-	
-});
+  // trava rolagem logo de cara (html e body)
+  $('html, body').addClass('no-scroll');
+$(window).on('load', function(){
+ // animações com mesma demora
+    var $wrap = $(".preloader_wrapper");
+    var $inner = $(".preloader_inner");
+
+    // espere os dois terminarem
+    $.when(
+      $wrap.delay(2500).fadeOut(400).promise(),
+      $inner.delay(2500).fadeOut(600).promise()
+    ).done(function () {
+      // remove overlay do DOM (garante que nada fique por cima)
+      $wrap.remove();
+      $inner.remove();
+
+      // libera a rolagem (html e body) e limpa qualquer estilo inline
+      $('html, body')
+        .removeClass('no-scroll')
+        .css({ overflow: '', height: '' });
+
+      // se quiser garantir mesmo no iOS:
+      document.documentElement.style.overflow = '';
+      document.body.style.overflow = '';
+    });
+
+    // seu restante:
+    $('.gallery_grid').isotope({
+      itemSelector: '.gallery_grid_item',
+      percentPosition: true,
+      masonry: { columnWidth: 30, gutter: 10 }
+    });
+
+    $('.index_v3 .gallery_grid').isotope({
+      itemSelector: '.index_v3 .gallery_grid_item',
+      percentPosition: true,
+      masonry: { columnWidth: 0, gutter: 0 }
+    });
+
+    $('select').niceSelect();
+  });
 })(jQuery); 
